@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>캠퍼스 MAP</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #ebe9dd;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      .title-box {
+        background-color: #d4c7af;
+        color: #544c42;
+        text-align: center;
+        padding: 10px;
+      }
+
+      h2 {
+        font-family: "Bowlby One", serif;
+      }
+
+      ul {
+        list-style-type: none;
+        background-color: #766b5d;
+        display: flex;
+      }
+
+      li {
+        flex: 1;
+        position: relative;
+      }
+
+      li a {
+        display: block;
+        color: #ebe9dd;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #544c42;
+      }
+
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #766b5d;
+        z-index: 10;
+      }
+
+      .dropdown a {
+        color: #ebe9dd;
+        padding: 12px 16px;
+      }
+
+      .dropdown a:hover {
+        background-color: #544c42;
+      }
+
+      li:hover .dropdown {
+        display: block;
+      }
+
+      .map-page {
+        display: flex;
+        width: 100%;
+        min-height: 700px;
+        background-color: #ebe9dd;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .left-map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .left-map img {
+        width: 1000px;
+        height: auto;
+        display: block;
+      }
+
+      .right-info {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 60px;
+        overflow: hidden;
+      }
+
+      .right-photo {
+        height: 50%;
+      }
+
+      .right-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .right-title {
+        height: 50%;
+        background-color: #f5f4ef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .right-title a {
+        color: #353018;
+        font-size: 38px;
+        font-weight: 900;
+        text-decoration: none;
+        line-height: 1.7;
+      }
+
+      .right-title a:hover {
+        color: #766b5d;
+      }
+
+      footer {
+        background-color: #766b5d;
+        color: #ebe9dd;
+        padding: 50px 10%;
+      }
+      .footer-box {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 200px;
+      }
+      .footer-contact form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 400px;
+      }
+      .input-group {
+        display: flex;
+        gap: 10px;
+      }
+      .input-group input {
+        flex: 1;
+        padding: 8px;
+      }
+      textarea {
+        padding: 15px;
+        margin-top: 15px;
+      }
+      button {
+        padding: 8px;
+        background-color: #d4c7af;
+        margin-top: 15px;
+        width: 100px;
+        border: none;
+        cursor: pointer;
+      }
+      .input-group input,
+      textarea,
+      button {
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+      }
+      .message-group {
+        display: flex;
+        gap: 12px;
+        align-items: stretch;
+      }
+      .infromation p {
+        color: #ebe9dd;
+        text-align: left;
+      }
+      .intro-text {
+        margin-bottom: 60px;
+        padding: 0 20px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .info-section {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 60px auto 100px auto;
+        padding: 0 20px;
+      }
+      .info-box {
+        background-color: #f7f6f0;
+        border: 2px solid #d4c7af;
+        border-radius: 20px;
+        padding: 40px 25px;
+        width: 320px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .box-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        height: 100%;
+        width: 100%;
+        margin: auto 0;
+      }
+      .info-box h3 {
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 700;
+        color: #544c42;
+        margin: 0;
+      }
+      .info-box p {
+        color: #6e655a;
+        line-height: 2;
+        text-align: center;
+        word-break: keep-all;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="title-box">
+        <h2>Freshman Campus Map</h2>
+      </div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Campus_MAP.html">캠퍼스 MAP</a></li>
+
+        <li>
+          <a href="#">건물 소개</a>
+          <div class="dropdown">
+            <a href="SU.html">학생회관</a>
+            <a href="HCA.html">효암관</a>
+            <a href="GLC.html">언어교육원</a>
+            <a href="HDH.html">현동홀</a>
+            <a href="NMH.html">느헤미야홀</a>
+            <a href="NTH.html">뉴턴홀</a>
+            <a href="ANH.html">올네이션스홀</a>
+            <a href="CSH.html">코너스톤홀</a>
+            <a href="OH.html">오석관</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="Facilities.html">편의 시설</a>
+        </li>
+      </ul>
+    </header>
+
+    <main class="map-page">
+      <section class="left-map">
+        <img src="Handong campus_map.png" usemap="#campusmap" />
+
+        <map name="campusmap">
+          <area
+            shape="rect"
+            coords="510,140,610,160"
+            href="HDH.html"
+          />
+          <area
+            shape="rect"
+            coords="625,290,720,340"
+            href="SU.html"
+          />
+          <area shape="rect" coords="595,50,640,80" href="GLC.html" />
+          <area shape="rect" coords="690,50,735,80" href="HCA.html" />
+          <area
+            shape="rect"
+            coords="465,280,485,370"
+            href="OH.html"
+          />
+          <area
+            shape="rect"
+            coords="390,270,410,370"
+            href="ANH.html"
+          />
+          <area
+            shape="rect"
+            coords="410,270,480,285"
+            href="NTH.html"
+          />
+          <area
+            shape="rect"
+            coords="415,345,460,370"
+            href="CSH.html"
+          />
+          <area
+            shape="rect"
+            coords="390,205,490,225"
+            href="NMH.html"
+          />
+        </map>
+      </section>
+
+      <section class="right-info">
+        <div class="right-photo">
+          <a href="https://www.handong.edu/kor/" target="_blank">
+            <img src="handong_photo.jpg" usemap="#campusmap" width="1020" />
+          </a>
+        </div>
+
+        <div class="right-title">
+          <a
+            href="https://www.handong.edu/kor/about/campus/map/"
+            target="_blank"
+          >
+            [한동대학교<br />캠퍼스 MAP]
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-box">
+        <div class="infromation">
+          <h3>Contact Info</h3>
+          <br /><br />
+          <p>주소: 경상북도 포항시 북구 흥해읍 한동로 558</p>
+          <p>이메일: csy070710@handong.edu</p>
+        </div>
+        <div class="contect">
+          <h3>Send a Messege</h3>
+          <br />
+          <form>
+            <div class="input-group">
+              <input type="text" placeholder="성함" />
+              <input type="email" placeholder="이메일" />
+            </div>
+            <div class="message-group">
+              <textarea placeholder="문의내용" cols="25" rows="2"></textarea>
+              <button type="submit">보내기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

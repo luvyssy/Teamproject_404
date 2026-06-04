@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>새내기 건물 소개</title>
+    <link rel="stylesheet" href="Nav_Foot.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #ebe9dd;
+        font-family: "Noto Sans KR", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header .title-box h2 {
+        font-family: "Bowlby One", serif;
+      }
+
+      #Buliding {
+        width: 90%;
+        max-width: 1300px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+
+      .box {
+        background-color: #f7f6f0;
+        border: 2px solid #d4c7af;
+        border-radius: 20px;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+
+      .picture {
+        float: left;
+        width: 53%;
+        height: 450px;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .name {
+        float: right;
+        width: 44%;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .class {
+        float: left;
+        width: 48.5%;
+        height: auto;
+        margin-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .floor {
+        float: right;
+        width: 48.5%;
+        height: auto;
+        margin-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #544c42;
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 0;
+        line-height: 1.7;
+        color: #544c42;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-box">
+        <h2>Freshman Campus Map</h2>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Campus_MAP.html">캠퍼스 MAP</a></li>
+
+          <li>
+            <a href="#">건물 소개</a>
+            <div class="dropdown">
+              <a href="SU.html">학생회관</a>
+              <a href="HCA.html">효암채플</a>
+              <a href="GLC.html">언어교육원</a>
+              <a href="HDH.html">현동홀</a>
+              <a href="NMH.html">느헤미야홀</a>
+              <a href="NTH.html">뉴턴홀</a>
+              <a href="ANH.html">올네이션스홀</a>
+              <a href="CSH.html">코너스톤홀</a>
+              <a href="OH.html">오석관</a>
+            </div>
+          </li>
+          <li>
+            <a href="Facilities.html">편의 시설</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div id="Buliding">
+        <div class="box picture">
+          <img src="CSH.jpg" alt="코너스톤홀" />
+        </div>
+
+        <div class="box name">
+          <h1>코너스톤(CSH)</h1>
+          <p>
+            코너스톤은 주춧돌이라는 뜻으로 한동대학교 학생들이 세상에 선한
+            건물을 짓는 주춧돌이 되자는 의미를 담고 있다. 공간시스템환경공학부의
+            수업이 주로 이루어지며 강의실, 교수연구실, 세미나실, 도서관,
+            설계실습실 등을 갖추고 있으며 1층에 위치한 카페 예소드에서는
+            재학생들이 휴식을 취하거나 공부할 수 있다.
+          </p>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="box class">
+          <h1>새내기가 듣는 수업</h1>
+          <p>공간학 입문</p>
+        </div>
+
+        <div class="box floor">
+          <h1>층별 정보</h1>
+          <p>
+            1층: 예소드 <br />2층: 강의실, 도서관 <br />3층: 교수연구실,
+            세미나실 <br />4층: 설계실
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-box">
+        <div class="infromation">
+          <h3>Contact Info</h3>
+          <br /><br />
+          <p>주소: 경상북도 포항시 북구 흥해읍 한동로 558</p>
+          <p>이메일: csy070710@handong.edu</p>
+        </div>
+        <div class="contect">
+          <h3>Send a Messege</h3>
+          <br />
+          <form>
+            <div class="input-group">
+              <input type="text" placeholder="성함" />
+              <input type="email" placeholder="이메일" />
+            </div>
+            <div class="message-group">
+              <textarea placeholder="문의내용" cols="25" rows="2"></textarea>
+              <button type="submit">보내기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

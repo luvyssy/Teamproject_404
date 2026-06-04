@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>새내기 건물 소개</title>
+
+    <link rel="stylesheet" href="Nav_Foot.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #ebe9dd;
+        font-family: "Noto Sans KR", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header .title-box h2 {
+        font-family: "Bowlby One", serif;
+      }
+
+      #Buliding {
+        width: 90%;
+        max-width: 1300px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+
+      .box {
+        background-color: #f7f6f0;
+        border: 2px solid #d4c7af;
+        border-radius: 20px;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+
+      .picture {
+        float: left;
+        width: 53%;
+        height: 450px;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .name {
+        float: right;
+        width: 44%;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .class {
+        float: left;
+        width: 48.5%;
+        height: auto;
+        margin-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .floor {
+        float: right;
+        width: 48.5%;
+        height: auto;
+        margin-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #544c42;
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 0;
+        line-height: 1.7;
+        color: #544c42;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-box">
+        <h2>Freshman Campus Map</h2>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Campus_MAP.html">캠퍼스 MAP</a></li>
+          <li>
+            <a href="#">건물 소개</a>
+            <div class="dropdown">
+              <a href="SU.html">학생회관</a>
+              <a href="HCA.html">효암채플</a>
+              <a href="GLC.html">언어교육원</a>
+              <a href="HDH.html">현동홀</a>
+              <a href="NMH.html">느헤미야홀</a>
+              <a href="NTH.html">뉴턴홀</a>
+              <a href="ANH.html">올네이션스홀</a>
+              <a href="CSH.html">코너스톤홀</a>
+              <a href="OH.html">오석관</a>
+            </div>
+          </li>
+          <li>
+            <a href="Facilities.html">편의 시설</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div id="Buliding">
+        <div class="box picture">
+          <img src="ANH.jpg" alt="올네이션스홀" />
+        </div>
+
+        <div class="box name">
+          <h1>올네이션스홀(ANH)</h1>
+          <p>
+            학교의 국제화를 선도하는 중요한 공간으로, 다양한 국제 관련 기구들이
+            위치해있다. 특히 교육을 원동력으로 삼아 지구촌의 문제를 해결하기
+            위해 적극적으로 활동하는 국제 교육기관 연합인 UNAI가 이곳에서
+            활동하고 있다. 주로 법학부의 수업이 진행되며, 법학부 학생들을 위한
+            모의 법정 시설도 갖추어져 있다. 한편, 한동 국제 법률대학원인
+            '힐스(HILSS)'도 위치해 있는데, 이곳을 졸업한 학생들은 미국 로스쿨
+            졸업과 유사한 J.D(Juris Doctor) 학위를 받게 되며, 이를 바탕으로 미국
+            변호사 시험에 응시할 수 있는 자격을 갖추게 된다.
+          </p>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="box class">
+          <h1>새내기가 듣는 수업</h1>
+          <p>법학 입문 <br />창조와 진화 <br />English Chapel</p>
+        </div>
+
+        <div class="box floor">
+          <h1>층별 정보</h1>
+          <p>
+            1층: 국제 법률대학원(Hills) <br />2층: 오디토리움, 모의법정
+            <br />3층: 오디토리움, 교수연구실
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-box">
+        <div class="infromation">
+          <h3>Contact Info</h3>
+          <br /><br />
+          <p>주소: 경상북도 포항시 북구 흥해읍 한동로 558</p>
+          <p>이메일: csy070710@handong.edu</p>
+        </div>
+        <div class="contect">
+          <h3>Send a Messege</h3>
+          <br />
+          <form>
+            <div class="input-group">
+              <input type="text" placeholder="성함" />
+              <input type="email" placeholder="이메일" />
+            </div>
+            <div class="message-group">
+              <textarea placeholder="문의내용" cols="25" rows="2"></textarea>
+              <button type="submit">보내기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

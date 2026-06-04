@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>학교 편의시설</title>
+    <link rel="stylesheet" href="Nav_Foot.css" />
+    <style>
+      body {
+        background: #ebe9dd;
+      }
+
+      /* 제목 */
+      .main-title {
+        text-align: center;
+        margin: 40px 0;
+      }
+
+      .main-title h1 {
+        font-size: 42px;
+        color: #544c42;
+      }
+
+      /* 전체 4구역 */
+      .facility-wrapper {
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        padding-bottom: 50px;
+      }
+
+      /* 카테고리 영역 */
+      .facility-section {
+        background: #d4c7af;
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .facility-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #544c42;
+        border-bottom: 3px solid #544c42;
+        padding-bottom: 10px;
+      }
+
+      /* 내부 카드 */
+      .place-card {
+        background: #f7f6f0;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .place-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .place-content {
+        padding: 15px;
+      }
+
+      .place-content h3 {
+        margin-bottom: 10px;
+        color: #141311;
+      }
+
+      .place-content p {
+        font-size: 15px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      /* 반응형 */
+      @media (max-width: 1200px) {
+        .facility-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 700px) {
+        .facility-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="title-box">
+        <h2>Freshman Campus Map</h2>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Campus_MAP.html">캠퍼스 MAP</a></li>
+          <li>
+            <a href="#">건물 소개</a>
+            <div class="dropdown">
+              <a href="SU.html">학생회관</a>
+              <a href="HCA.html">효암채플</a>
+              <a href="GLC.html">언어교육원</a>
+              <a href="HDH.html">현동홀</a>
+              <a href="NMH.html">느헤미야홀</a>
+              <a href="NTH.html">뉴턴홀</a>
+              <a href="ANH.html">올네이션스홀</a>
+              <a href="CSH.html">코너스톤홀</a>
+              <a href="OH.html">오석관</a>
+            </div>
+          </li>
+          <li><a href="#convenience">편의 시설</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-title">
+        <h1>편의시설 안내</h1>
+      </div>
+
+      <section class="facility-wrapper">
+        <div class="facility-section">
+          <h2>편의점</h2>
+          <div class="place-card">
+            <img src="CU.jpg" alt="CU" />
+            <div class="place-content">
+              <h3>CU 한동대점</h3>
+              <p>오석관 3층에 위치하며 24시간 운영됩니다.</p>
+            </div>
+          </div>
+          <div class="place-card">
+            <img src="GS25.jpg" alt="GS25" />
+            <div class="place-content">
+              <h3>GS25 한동대학사점</h3>
+              <p>카이퍼 RC 앞에 위치하며 24시간 운영됩니다.</p>
+            </div>
+          </div>
+          <div class="place-card">
+            <img src="HGU_Store.jpg" alt="한동매점" />
+            <div class="place-content">
+              <h3>한동매점</h3>
+              <p>
+                밷엘 건물에 위치하며 평일 8:30-18:00, 토요일 9:00-17:00, 일요일
+                및 공휴일 14:00-22:00까지 운영됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="facility-section">
+          <h2>카페</h2>
+          <div class="place-card">
+            <img src="Yesod.jpeg" alt="예소드" />
+            <div class="place-content">
+              <h3>예소드</h3>
+              <p>
+                코너스톤홀 1층에 위치한 카페로 피자, 음료수 등 다양한 메뉴를
+                제공합니다. 평일 9:00-23:00, 주말 12:00-20:30까지 운영합니다.
+              </p>
+            </div>
+          </div>
+          <div class="place-card">
+            <img src="Hisbeans.jpg" alt="히즈빈즈" />
+            <div class="place-content">
+              <h3>히즈빈즈</h3>
+              <p>
+                오석관 3층에 위치해있으며 학생들과 교직원이 자주 이용하는 교내
+                카페 공간입니다. 평일 12:00-18:00, 주말 12:00-21:00까지
+                운영됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="facility-section">
+          <h2>기도실</h2>
+          <div class="place-card">
+            <img src="sky.jpg" alt="하늘소리" />
+            <div class="place-content">
+              <h3>하늘소리</h3>
+              <p>
+                평온한 분위기 속에서 조용히 개인 기도와 묵상에 집중할 수 있는
+                교내 기도 공간입니다.
+              </p>
+            </div>
+          </div>
+          <div class="place-card">
+            <img src="David.png" alt="다윗의 장막" />
+            <div class="place-content">
+              <h3>다윗의 장막</h3>
+              <p>
+                학관 2층에 위치해 있으며 말씀 묵상과 기도를 할 수 있는
+                공간입니다.
+              </p>
+            </div>
+          </div>
+          <div class="place-card">
+            <img src="HDH_pray.png" alt="현동기도실" />
+            <div class="place-content">
+              <h3>현동기도실</h3>
+              <p>현동홀 4층에 위치해 있으며 언제든지 이용 가능한 공간입니다.</p>
+            </div>
+          </div>
+          <div class="place-card">
+            <img src="OH_pray.png" alt="오석 기도실" />
+            <div class="place-content">
+              <h3>오석 기도실</h3>
+              <p>
+                오석관 4층에 위치한 기도실로 말씀묵상과 기도를 할 수 있는
+                공간입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="facility-section">
+          <h2>의료시설</h2>
+          <div class="place-card">
+            <img src="Boaz.png" alt="보아스 메디컬" />
+            <div class="place-content">
+              <h3>보아스 메디컬</h3>
+              <p>
+                기본적인 진료와 건강 상담 서비스를 제공하며 학생들이 건강한
+                캠퍼스 생활을 할 수 있도록 돕고 있습니다.
+              </p>
+            </div>
+          </div>
+          <div class="place-card">
+            <img src="Counseling_Center.png" alt="상담센터" />
+            <div class="place-content">
+              <h3>상담센터</h3>
+              <p>
+                학생들의 심리·정서적 안정을 지원하는 기관으로, 개인 상담과
+                다양한 프로그램을 통해 건강한 대학 생활과 공동체 적응을 돕고
+                있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-box">
+        <div class="infromation">
+          <h3>Contact Info</h3>
+          <br /><br />
+          <p>주소: 경상북도 포항시 북구 흥해읍 한동로 558</p>
+          <p>이메일: csy070710@handong.edu</p>
+        </div>
+        <div class="contect">
+          <h3>Send a Message</h3>
+          <br />
+          <form>
+            <div class="input-group">
+              <input type="text" placeholder="성함" />
+              <input type="email" placeholder="이메일" />
+            </div>
+            <div class="message-group">
+              <textarea placeholder="문의내용" cols="25" rows="2"></textarea>
+              <button type="submit">보내기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
